@@ -24,7 +24,7 @@ class showNote: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        noteTitleLabel.text = noteTitle
+        self.navigationItem.title = noteTitle
         
         self.path = "/Notes/"+noteTitle+".txt"
         
@@ -59,9 +59,6 @@ class showNote: UIViewController {
     @IBAction func mainButtonPressed(){
         
        
-        
-        
-   
         performSegue(withIdentifier: "SegueFromShowNoteToMain", sender: self)
     }
     
@@ -74,7 +71,7 @@ class showNote: UIViewController {
     @IBAction func deleteButtonPressed(){
         let client = DropboxClientsManager.authorizedClient
         
-        client?.files.delete(path: self.path).response { response, error in
+        client?.files.deleteV2(path: self.path).response { response, error in
             if let response = response {
                 print(response)
                 
@@ -97,7 +94,7 @@ class showNote: UIViewController {
                 let textContent = noteContentTextView.text
                 let textData:Data? = textContent?.data(using: String.Encoding.utf8)
                 let client = DropboxClientsManager.authorizedClient!
-                client.files.delete(path: self.path).response { response, error in
+                client.files.deleteV2(path: self.path).response { response, error in
                     if let response = response {
                         print(response)
                         

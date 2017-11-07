@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WP1-SR-4LN">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WP1-SR-4LN">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkerFeltThin.ttf">
+            <string>MarkerFelt-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">
@@ -19,80 +24,77 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T52-M9-QzD">
-                                <rect key="frame" x="16" y="488" width="163" height="103"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="LXq-qN-xXi">
+                                <rect key="frame" x="144.5" y="58" width="279" height="202"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="niI-cF-fRe">
+                                        <rect key="frame" x="0.0" y="0.0" width="279" height="152"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO 'THE' NOTE APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb3-we-plM">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="25"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF2-uR-7dR">
+                                                <rect key="frame" x="0.0" y="41" width="279" height="58"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="MdK-eU-1z4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                                <state key="normal" title="Sign In To Sync With Dropbox!"/>
+                                                <connections>
+                                                    <action selector="linkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LUh-4J-3Wz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zau-gI-Pb3">
+                                                <rect key="frame" x="0.0" y="115" width="279" height="37"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                                <state key="normal" title="Sign Out!"/>
+                                                <connections>
+                                                    <action selector="signOutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VrQ-bZ-bFx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PU3-z0-0AK">
+                                        <rect key="frame" x="0.0" y="171" width="279" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T52-M9-QzD">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="31"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                <state key="normal" title="View Notes">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showNotesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fk8-wt-Zhj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJu-CO-ZrM">
+                                                <rect key="frame" x="159.5" y="0.0" width="119.5" height="31"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                <state key="normal" title="Add Note">
+                                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5e3-Zt-Top"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="163" id="0Nz-Dq-8Yo"/>
-                                    <constraint firstAttribute="height" constant="103" id="i44-Hc-4I9"/>
+                                    <constraint firstItem="PU3-z0-0AK" firstAttribute="centerX" secondItem="LXq-qN-xXi" secondAttribute="centerX" id="inE-WR-2Sd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="View Notes">
-                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="showNotesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fk8-wt-Zhj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJu-CO-ZrM">
-                                <rect key="frame" x="187" y="513" width="149" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="hAK-hz-D2h"/>
-                                    <constraint firstAttribute="width" constant="149" id="rXj-Yf-LtJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add Note">
-                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5e3-Zt-Top"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zau-gI-Pb3">
-                                <rect key="frame" x="16" y="286" width="343" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Sign Out!"/>
-                                <connections>
-                                    <action selector="signOutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VrQ-bZ-bFx"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WELCOME TO 'THE' NOTE APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb3-we-plM">
-                                <rect key="frame" x="16" y="89" width="332" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="332" id="A2N-9u-4ho"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.97998231649398804" green="0.99233835935592651" blue="0.98809391260147095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF2-uR-7dR">
-                                <rect key="frame" x="16" y="179" width="343" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="MdK-eU-1z4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Sign In!"/>
-                                <connections>
-                                    <action selector="linkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LUh-4J-3Wz"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="OF2-uR-7dR" secondAttribute="trailing" id="4Bc-pv-9CA"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="zau-gI-Pb3" secondAttribute="leading" id="4Wm-fh-pvs"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T52-M9-QzD" secondAttribute="bottom" constant="76" id="5Jk-ry-D02"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TJu-CO-ZrM" secondAttribute="trailing" constant="23" id="I7d-Wb-0Vh"/>
-                            <constraint firstItem="OF2-uR-7dR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="115" id="KBd-6N-bYU"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="OF2-uR-7dR" secondAttribute="leading" id="KXL-27-gFd"/>
-                            <constraint firstItem="nb3-we-plM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="UwN-6K-cZk"/>
-                            <constraint firstItem="nb3-we-plM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEh-eH-2iT"/>
-                            <constraint firstItem="zau-gI-Pb3" firstAttribute="top" secondItem="OF2-uR-7dR" secondAttribute="bottom" constant="49" id="gKq-8j-E74"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zau-gI-Pb3" secondAttribute="trailing" id="hzk-un-QX8"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="T52-M9-QzD" secondAttribute="leading" id="o5d-M0-9Gy"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TJu-CO-ZrM" secondAttribute="bottom" constant="101" id="weU-in-dPc"/>
+                            <constraint firstItem="LXq-qN-xXi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="EGj-Ru-IvM"/>
+                            <constraint firstItem="LXq-qN-xXi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d6S-Gf-t3j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home Screen" id="MOX-Wj-cA0"/>
@@ -116,48 +118,54 @@
                         <viewControllerLayoutGuide type="bottom" id="egY-FZ-r4d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CBh-Mp-HMA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Title:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmz-lL-A68">
-                                <rect key="frame" x="117" y="72" width="141" height="24"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="8ja-iV-uIm">
+                                <rect key="frame" x="20" y="40" width="528" height="132.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Title:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmz-lL-A68">
+                                        <rect key="frame" x="193.5" y="0.0" width="141" height="29.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="141" id="bF4-Wd-Zxq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baZ-MY-lvd">
+                                        <rect key="frame" x="0.0" y="52.5" width="528" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="xlJ-L7-SWQ"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-Zk-qlW">
+                                        <rect key="frame" x="185.5" y="97.5" width="157" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="157" id="Sum-IL-sT9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                        <state key="normal" title="Save Note Title"/>
+                                        <connections>
+                                            <action selector="titleInput:" destination="jao-3w-FMK" eventType="touchUpInside" id="WEP-CS-8j3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="141" id="bF4-Wd-Zxq"/>
+                                    <constraint firstAttribute="trailing" secondItem="baZ-MY-lvd" secondAttribute="trailing" id="fpM-yo-Yv5"/>
+                                    <constraint firstItem="baZ-MY-lvd" firstAttribute="leading" secondItem="8ja-iV-uIm" secondAttribute="leading" id="mAI-rk-QlS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baZ-MY-lvd">
-                                <rect key="frame" x="16" y="132" width="343" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="xlJ-L7-SWQ"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-Zk-qlW">
-                                <rect key="frame" x="109" y="190" width="157" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="157" id="Sum-IL-sT9"/>
-                                </constraints>
-                                <state key="normal" title="Save Note Title"/>
-                                <connections>
-                                    <action selector="titleInput:" destination="jao-3w-FMK" eventType="touchUpInside" id="WEP-CS-8j3"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="d0h-Zk-qlW" firstAttribute="centerX" secondItem="CBh-Mp-HMA" secondAttribute="centerX" id="55k-UZ-5mn"/>
-                            <constraint firstItem="tmz-lL-A68" firstAttribute="top" secondItem="jGy-nG-aUb" secondAttribute="bottom" constant="8" id="7Hd-51-W8V"/>
-                            <constraint firstItem="baZ-MY-lvd" firstAttribute="leading" secondItem="CBh-Mp-HMA" secondAttribute="leadingMargin" id="9E7-7N-YaR"/>
-                            <constraint firstItem="d0h-Zk-qlW" firstAttribute="top" secondItem="baZ-MY-lvd" secondAttribute="bottom" constant="36" id="FUX-tV-0dr"/>
-                            <constraint firstItem="baZ-MY-lvd" firstAttribute="top" secondItem="tmz-lL-A68" secondAttribute="bottom" constant="36" id="WLB-cW-MvU"/>
-                            <constraint firstItem="tmz-lL-A68" firstAttribute="leading" secondItem="CBh-Mp-HMA" secondAttribute="leadingMargin" constant="101" id="jg2-Io-m2g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tmz-lL-A68" secondAttribute="trailing" constant="101" id="nwQ-bT-ti1"/>
-                            <constraint firstItem="baZ-MY-lvd" firstAttribute="centerX" secondItem="tmz-lL-A68" secondAttribute="centerX" id="wHy-ep-5KK"/>
+                            <constraint firstItem="8ja-iV-uIm" firstAttribute="centerX" secondItem="CBh-Mp-HMA" secondAttribute="centerX" id="BAk-6y-U8D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8ja-iV-uIm" secondAttribute="trailing" id="HDB-hu-8uP"/>
+                            <constraint firstItem="8ja-iV-uIm" firstAttribute="top" secondItem="jGy-nG-aUb" secondAttribute="bottom" constant="8" id="W3o-cv-fgq"/>
+                            <constraint firstItem="8ja-iV-uIm" firstAttribute="leading" secondItem="CBh-Mp-HMA" secondAttribute="leadingMargin" id="Ytb-LF-u7V"/>
                         </constraints>
                     </view>
                     <connections>
@@ -172,47 +180,47 @@
         <!--Add Note2-->
         <scene sceneID="XbL-p6-fxM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1sQ-81-gGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="z39-bs-Mjh" customClass="addNote2" customModule="Note_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OrD-pP-2CN"/>
                         <viewControllerLayoutGuide type="bottom" id="rq8-pg-PLN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iEF-pQ-yTb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter note here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Jf-vI-Bv7">
-                                <rect key="frame" x="37" y="115" width="301" height="130"/>
+                                <rect key="frame" x="41" y="88.5" width="301" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="fW5-Br-4wv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Note Below:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oT-7K-kSV">
-                                <rect key="frame" x="74" y="72" width="226" height="24"/>
+                                <rect key="frame" x="78" y="40" width="226" height="29.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="226" id="ECa-RN-EUJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gps-zu-uDP">
-                                <rect key="frame" x="122" y="252" width="131" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gps-zu-uDP">
+                                <rect key="frame" x="126" y="231" width="131" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="NBG-M1-oKq"/>
                                     <constraint firstAttribute="height" constant="43" id="gEB-zl-uPO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <state key="normal" title="Save Note"/>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="z39-bs-Mjh" eventType="touchUpInside" id="y7m-Cx-mQv"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="3oT-7K-kSV" secondAttribute="trailing" constant="59" id="2Y9-8i-HAx"/>
                             <constraint firstItem="0Jf-vI-Bv7" firstAttribute="leading" secondItem="iEF-pQ-yTb" secondAttribute="leadingMargin" constant="21" id="5Co-MA-O8Y"/>
@@ -230,6 +238,7 @@
                         <segue destination="WP1-SR-4LN" kind="show" identifier="SeguetoMain" id="4st-n5-y4f"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1sQ-81-gGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="975.20000000000005" y="943.17841079460277"/>
         </scene>
@@ -238,25 +247,25 @@
             <objects>
                 <tableViewController id="fNO-o5-dyV" customClass="noteTableViewController" customModule="Note_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="7jB-5L-cY3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteTableViewCell" rowHeight="90" id="1oQ-mv-AqJ" customClass="noteTableViewCell" customModule="Note_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="568" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1oQ-mv-AqJ" id="yfm-bP-O7R">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="568" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvN-N2-L4j">
-                                            <rect key="frame" x="8" y="0.0" width="176" height="82"/>
+                                            <rect key="frame" x="20" y="-2.5" width="176" height="82"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="176" id="Fs8-ru-ok1"/>
                                                 <constraint firstAttribute="height" constant="82" id="vTu-4R-2t2"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -294,67 +303,75 @@
                         <viewControllerLayoutGuide type="bottom" id="kFI-Pv-bHT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wda-g6-xp7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14R-iD-xIY">
-                                <rect key="frame" x="213" y="280" width="113" height="30"/>
-                                <state key="normal" title="Return and Save"/>
-                                <connections>
-                                    <action selector="mainButtonPressed" destination="sde-U8-del" eventType="touchUpInside" id="HVq-ky-FKS"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNh-0o-7SG">
-                                <rect key="frame" x="16" y="116" width="339" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CaL-Ma-6ox">
+                                <rect key="frame" x="95" y="58" width="378" height="218"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X5Q-aU-Zun">
+                                        <rect key="frame" x="5" y="0.0" width="368" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="Zgr-KZ-aNb"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RvD-bo-9RK">
+                                        <rect key="frame" x="77" y="140" width="224" height="78"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="ytK-cT-Iqf">
+                                                <rect key="frame" x="0.0" y="0.0" width="224" height="33"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsq-zZ-AvE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="uht-Wj-b2h"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
+                                                        <state key="normal" title="Edit Note"/>
+                                                        <connections>
+                                                            <action selector="editButtonPressed" destination="sde-U8-del" eventType="touchUpInside" id="MaD-Mw-uuw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziL-5o-yec">
+                                                        <rect key="frame" x="124" y="0.0" width="100" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="Q3p-eZ-qRr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
+                                                        <state key="normal" title="Delete Note"/>
+                                                        <connections>
+                                                            <action selector="deleteButtonPressed" destination="sde-U8-del" eventType="touchUpInside" id="4SZ-0o-4cr"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14R-iD-xIY">
+                                                <rect key="frame" x="12" y="45" width="200" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="BYa-W5-2Qb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
+                                                <state key="normal" title="Return and Save"/>
+                                                <connections>
+                                                    <action selector="mainButtonPressed" destination="sde-U8-del" eventType="touchUpInside" id="HVq-ky-FKS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Kl2-e4-xe4"/>
+                                    <constraint firstAttribute="trailing" secondItem="X5Q-aU-Zun" secondAttribute="trailing" constant="5" id="SAV-kr-hIv"/>
+                                    <constraint firstItem="X5Q-aU-Zun" firstAttribute="leading" secondItem="CaL-Ma-6ox" secondAttribute="leading" constant="5" id="Zrt-z7-7HR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X5Q-aU-Zun">
-                                <rect key="frame" x="16" y="167" width="343" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="yRF-hj-EKk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziL-5o-yec">
-                                <rect key="frame" x="61" y="280" width="82" height="30"/>
-                                <state key="normal" title="Delete Note"/>
-                                <connections>
-                                    <action selector="deleteButtonPressed" destination="sde-U8-del" eventType="touchUpInside" id="4SZ-0o-4cr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsq-zZ-AvE">
-                                <rect key="frame" x="10" y="70" width="354" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="354" id="Gcx-BB-JcW"/>
-                                </constraints>
-                                <state key="normal" title="Edit Note"/>
-                                <connections>
-                                    <action selector="editButtonPressed" destination="sde-U8-del" eventType="touchUpInside" id="MaD-Mw-uuw"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="X5Q-aU-Zun" firstAttribute="top" secondItem="KNh-0o-7SG" secondAttribute="bottom" constant="21" id="0lN-SF-Q1m"/>
-                            <constraint firstItem="qsq-zZ-AvE" firstAttribute="centerX" secondItem="wda-g6-xp7" secondAttribute="centerX" id="32y-L6-dyB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="X5Q-aU-Zun" secondAttribute="trailing" id="60M-i8-mrN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KNh-0o-7SG" secondAttribute="trailing" constant="4" id="CMP-W3-U8F"/>
-                            <constraint firstItem="KNh-0o-7SG" firstAttribute="top" secondItem="UVN-W4-IoX" secondAttribute="bottom" constant="52" id="DZ7-Z9-G3y"/>
-                            <constraint firstItem="KNh-0o-7SG" firstAttribute="top" secondItem="qsq-zZ-AvE" secondAttribute="bottom" constant="16" id="KR0-XJ-6bp"/>
-                            <constraint firstItem="X5Q-aU-Zun" firstAttribute="centerX" secondItem="wda-g6-xp7" secondAttribute="centerX" id="MWv-5y-5hG"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="X5Q-aU-Zun" secondAttribute="leading" id="S2M-eX-77D"/>
-                            <constraint firstItem="14R-iD-xIY" firstAttribute="baseline" secondItem="ziL-5o-yec" secondAttribute="baseline" id="T5L-17-eAH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="14R-iD-xIY" secondAttribute="trailing" constant="33" id="YvQ-En-NgH"/>
-                            <constraint firstItem="ziL-5o-yec" firstAttribute="leading" secondItem="wda-g6-xp7" secondAttribute="leadingMargin" constant="45" id="ili-tv-HiX"/>
-                            <constraint firstItem="14R-iD-xIY" firstAttribute="top" secondItem="X5Q-aU-Zun" secondAttribute="bottom" constant="29" id="n9u-R9-WuX"/>
-                            <constraint firstItem="qsq-zZ-AvE" firstAttribute="top" secondItem="UVN-W4-IoX" secondAttribute="bottom" constant="6" id="qAB-Jo-Tm3"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="KNh-0o-7SG" secondAttribute="leading" id="x5v-il-6US"/>
+                            <constraint firstItem="CaL-Ma-6ox" firstAttribute="top" secondItem="UVN-W4-IoX" secondAttribute="bottom" constant="26" id="jZV-bJ-mbM"/>
+                            <constraint firstItem="CaL-Ma-6ox" firstAttribute="centerX" secondItem="wda-g6-xp7" secondAttribute="centerX" id="t9L-om-koB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Note" id="cfv-NN-VFz"/>
@@ -362,7 +379,6 @@
                         <outlet property="editButton" destination="qsq-zZ-AvE" id="hJn-iS-Qpc"/>
                         <outlet property="mainButton" destination="14R-iD-xIY" id="r9N-ei-P0b"/>
                         <outlet property="noteContentTextView" destination="X5Q-aU-Zun" id="zxX-Ss-dHy"/>
-                        <outlet property="noteTitleLabel" destination="KNh-0o-7SG" id="atx-of-toV"/>
                         <segue destination="WP1-SR-4LN" kind="show" identifier="SegueFromShowNoteToMain" id="toj-ao-Bk6"/>
                     </connections>
                 </viewController>
@@ -376,7 +392,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WP1-SR-4LN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ucr-5o-Avf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

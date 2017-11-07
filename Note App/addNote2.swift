@@ -20,7 +20,7 @@ class addNote2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = noteTitle
                 // Do any additional setup after loading the view.
     }
 
